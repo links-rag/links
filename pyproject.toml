@@ -1,10 +1,11 @@
 [project]
-name = "arxiv-retrieval_jacky"
+name = "links-rag"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 authors = [
     { name = "skumarudel", email = "skumarudel@gmail.com" }
+    { name = "jackypheno", email = "jacky.kumar@umontreal.ca" }
 ]
 requires-python = ">=3.12"
 dependencies = [
@@ -24,7 +25,7 @@ dependencies = [
 ]
 
 [project.scripts]
-arxiv-retrieval = "arxiv_retrieval_jacky:main"
+arxiv-retrieval = "arxiv_retrieval:main"
 
 [build-system]
 requires = ["uv_build>=0.9.4,<0.10.0"]
