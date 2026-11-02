@@ -1,0 +1,44 @@
+[project]
+name = "arxiv-retrieval_jacky"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "skumarudel", email = "skumarudel@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "adapters==1.2.0",
+    "bm25s>=0.3.4",
+    "chromadb==1.5.2",
+    "fastapi>=0.143.2",
+    "huggingface-hub==0.36.2",
+    "llama-index-core>=0.12,<0.15",
+    "pyyaml>=6",
+    "safetensors==0.7.0",
+    "sentence-transformers>=5.2.3",
+    "torch>=2.11",
+    "tqdm>=4.67.3",
+    "transformers==4.51.3",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+arxiv-retrieval = "arxiv_retrieval_jacky:main"
+
+[build-system]
+requires = ["uv_build>=0.9.4,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-m 'not slow'"
+markers = [
+    "slow: loads Specter2, the cross-encoder, or another real model",
+]
