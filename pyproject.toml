@@ -1,7 +1,7 @@
 [project]
 name = "links-rag"
 version = "0.1.0"
-description = "Add your description here"
+description = "A Retrieval-Augmented Generation (RAG) pipeline for high-energy and astroparticle physics literature synthesis and analysis."
 readme = "README.md"
 authors = [
     {name = "skumarudel", email = "skumarudel@gmail.com"},
